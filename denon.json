@@ -1,0 +1,20 @@
+{
+    "scripts": {
+        "start": {
+            "cmd": "deno run server.ts",
+            "desc": "Run the server.",
+            "allow": [
+                "all"
+            ]
+        },
+        "init": {
+            "cmd": "deno cache --lock=packages.json --lock-write packages.ts",
+            "desc": "create lock file"
+           },
+        "reinit": {
+            "cmd": "deno cache --reload --lock=packages.json --lock-write packages.ts",
+            "desc": "create lock file with force reload"
+        }
+    }
+
+}
